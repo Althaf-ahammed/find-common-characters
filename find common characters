@@ -1,0 +1,24 @@
+def find_common_characters(msg1,msg2):
+     
+    res=''
+    if len(msg1)>len(msg2):
+         biggest=msg1
+         smallest=msg2
+    else:
+        biggest=msg2
+        smallest=msg1
+    for i in range (len(biggest)):
+        for j in range(len(smallest)):
+            if(smallest[j]==biggest[i] and smallest[j]!=" "):
+                 
+                 res = res + smallest[j]
+                 break
+    if res=='':
+        return -1
+    return res    
+
+#Provide different values for msg1,msg2 and test your program
+msg1="moto"
+msg2="moto"
+common_characters=find_common_characters(msg1,msg2)
+print(common_characters)
